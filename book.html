@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Book Manager</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="bookapp.js" defer></script>
+</head>
+<body class="bg-gray-50 min-h-screen p-6">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+    <!-- Sidebar form -->
+    <aside class="md:col-span-1 bg-white p-4 rounded shadow">
+      <h2 class="text-lg font-medium mb-3">Add Book</h2>
+      <form id="addForm" class="space-y-3">
+        <input id="title" placeholder="Title" class="w-full border p-2 rounded" required />
+        <input id="author" placeholder="Author" class="w-full border p-2 rounded" required />
+        <input id="price" placeholder="Price" type="number" class="w-full border p-2 rounded" required />
+        <input id="image" placeholder="Image URL" class="w-full border p-2 rounded" />
+        <button class="w-full bg-blue-600 text-white py-2 rounded">Add Book</button>
+      </form>
+    </aside>
+
+    <!-- Book grid -->
+    <main class="md:col-span-3">
+      <h1 class="text-2xl font-semibold mb-4">Books</h1>
+      <div id="booksGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </main>
+  </div>
+
+  <!-- Modal placeholder if you want view details -->
+  <div id="modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50">
+    <div class="bg-white p-4 rounded max-w-md w-full" id="modalContent"></div>
+  </div>
+</body>
+</html>
