@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todos</title>
+  <style>
+    #todo-container {
+      max-width: 700px;
+      margin: 20px auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+    .todo-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 6px;
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <h2 style="text-align:center">Todos Page</h2>
+
+  <!-- IMPORTANT: This container must exist -->
+  <div id="todo-container"></div>
+
+  <div id="footer"></div>
+
+  <script type="module" src="todos.js"></script>
+</body>
+</html>
